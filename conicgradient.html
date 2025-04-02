@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            height:100dvh;
+            width:100%;
+            align-content: center;
+            
+            background: radial-gradient(circle at 15% 90%,#043215 32%,
+            #1f3e2b 32% 35%, #043215 35%);
+          
+        }
+        .listbox
+        {
+            display: flex;
+            width:45%;
+            box-sizing: border-box;
+            padding:3%;
+            color:#043215;
+            margin-left:50%;
+            font-size:20px;
+            gap:20px;
+            line-height: 40px;
+            background-color: white;
+        }
+        ul
+        {
+         list-style: none;
+        }
+      
+        li::before
+        {
+            content: url(images/tick.png);
+            margin-right:10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        
+        <div class="listbox">
+        <ul>
+            <li>Initial Consultation</li>
+            <li>Email Support</li>
+            <li>Online Resources</li>
+        </ul>
+        <ul>
+            <li>Flexible Scheduling</li>
+            <li>Tracking Sheets</li>
+            <li>Private Client Portal</li>
+        </ul>
+    </div>
+    </div>
+    
+</body>
+</html>
