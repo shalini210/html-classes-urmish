@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        header
+        {
+            height: 100dvh;
+            width:100%;
+            background-image: url(images/img-slide-2.jpg);
+            background-size: cover;
+        }
+        .topnav
+        {
+            height:40px;
+            align-content: center;
+            background-color: #00000038;
+            color:white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding :  0 20px 0px 20px;
+             /* padding-left:20px; 
+            padding-right:20px;/ */
+        }
+        .topnav-right
+        {
+            display: flex;
+            width:23%;
+            justify-content: space-between;
+        }
+        .socials{
+            display: flex;
+            gap:9px;
+        }
+        .mainnav
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0px 20px 0px 20px;
+            height: 60px;
+            background-color: #00000038;
+        }
+        .mainnav>ul
+        {
+            display: flex;
+            gap:90px;
+            list-style: none;
+        }
+        .mainnav>ul>li>a
+        {
+            color: white;
+        }
+        .Vacaion
+        {
+            padding: 90px;
+            display: flex;
+            flex-direction: column;
+            font-size: 40px;
+            color: white;
+            align-content: center;
+            align-items:center;
+            justify-content: center;
+            text-align: center;
+        }
+        .destination
+        {
+            height: 150px;
+            background-color: rgb(233, 233, 233);
+            font-size: larger;
+            /* justify-content: center; */
+            align-content: center;
+            gap:50px;
+            display: flex;
+            padding-left: 150px ;
+            
+            align-items:center;
+
+        }
+        .destination>div
+        {
+            display: flex;
+            gap:30px;
+        }
+        .adventure-section
+        {
+            height:350px;
+            width:100%;
+            background-image: url('images/bg-search.jpg');
+            padding-left:50px;
+            display: flex;
+            flex-direction: column;
+            color:white;
+            justify-content: center;
+        }
+        .adventure-section>div
+        {
+            display: flex;
+        }
+        .worldmap
+        {
+            height: 350px;
+            width: 50%;
+            /* background-color: rgb(176, 166, 238); */
+            background-image: url('images/img-top-rated.jpg');
+            background-size:contain ;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top:100px;
+        }
+        .worldmaptext
+        {
+            height: 350px;
+            width:50%;
+            /* background-color: blue; */
+            margin-top: 100px;
+            color: black;
+            margin-left: 30px ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <div class="topnav-left">Callus + 987867675</div>
+            <div  class="topnav-right">
+                <div class="socials">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-google"></i>
+                </div>
+                <div class="socials"> <span><i class="fa-solid fa-user-plus"></i> Login</span> 
+                    <i class="fa-solid fa-right-to-bracket"></i> <span>Signup</span></div>
+            </div>
+        </nav>
+        <hr>
+        <nav class="mainnav">
+            <img src="images/logo.png" alt="">
+            <ul>
+                <li><a href="#"><span>Home</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><a href="#"><span>About </span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><a href="#"><span>Gallery</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><a href="#"><span>Destinations</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><a href="#"><span>Services</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><a href="#"><span>Blog</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+                <li><a href="#"><span>Contact</span>&nbsp;&nbsp;<i class="fa-solid fa-circle-chevron-down"></i></a></li>
+            </ul>
+        </nav>
+        <div class="Vacaion">
+            <Span style="font-size: 70px;">Perfect Place on Vacation</Span><br>
+            Asia, Africa, Australia <br><br>
+            <input type="button" style="font-size: 30px;" value="More Detail">
+        </div>
+    </header>
+    <section class="destination">
+     <div>
+        <div style="font-size: 35px;">  <i style="transform: rotate(320deg);;color: rgb(219, 151, 16);" class="fa-solid fa-plane"></i>
+        </div>
+        <div > <span>300+ Destination</span> <br>
+         <span style="font-size: small;">Sed ut perspiciatis</span>
+     </div>
+     </div>
+     <div>
+        <div style="font-size: 35px;">  <i style="transform: rotate(320deg);;color: rgb(219, 151, 16);" class="fa-solid fa-plane"></i>
+        </div>
+        <div > <span>Affordable Price</span> <br>
+         <span style="font-size: small;">Sed ut perspiciatis</span>
+     </div>
+     </div>
+    </section>
+
+    <section class="adventure-section">
+        <h1 style="font-size: 40px;">Find your Adventure with us </h1>
+        <div>
+            <div>
+                <label>keywords</label> <br>
+                <input type="text">
+            </div>
+            <div>
+                <label>Select your trip</label> <br>
+                <input type="text">
+            </div>
+            <div>
+                <label>Destination</label> <br>
+                <input type="text">
+            </div>
+            <div>
+                <label>Duration</label> <br>
+                <input type="text">
+            </div>
+        </div>
+        <div>
+                <div>
+                    <label>Date</label> <br>
+                    <input type="text">
+                </div>
+                <div>
+                    <br>
+                    <input type="button" value="FIND NOW">
+                </div>
+        </div>
+    </section>
+    <section style="display: flex;" >
+        <div class="worldmap">
+        </div>
+        <div class="worldmaptext">
+            <span style="font-size:30px;">TOP RATED OUR TOURS</span><br>
+            <br>
+            No mei consecteture <br>
+            <hr>
+            <div style="margin-top: 20px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mo
+                llitia quas pariatur reprehenderit error tempore nobis in 
+                repudiandae ea consequatur enim dicta volupta.</div>
+            <div>Europe <sup>demo text</sup></div>
+        </div>
+    </section>
+</body>
+</html>
