@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Forjs.css">
+    <script>
+        function add()
+        {
+            var a= document.getElementById("txt1").value
+            var b= document.getElementById("txt2").value
+            var c = parseInt(a) + parseInt(b)
+            var msg = "The sum of " + a + " and " + b + " is " + c;
+            document.getElementById("hresult").innerHTML = msg
+        }
+        function sub()
+        {
+            var a= document.getElementById("txt1").value
+            var b= document.getElementById("txt2").value
+            var c = parseInt(a) - parseInt(b)
+            var msg = "The difference of " + a + " and " + b + " is " + c;
+            document.getElementById("hresult").innerHTML = msg
+        }
+        function mul()
+        {
+            var a= document.getElementById("txt1").value
+            var b= document.getElementById("txt2").value
+            var c = parseInt(a) * parseInt(b)
+            var msg = "The product of " + a + " and " + b + " is " + c;
+            document.getElementById("hresult").innerHTML = msg
+        }
+        function div()
+        {
+            var a= document.getElementById("txt1").value
+            var b= document.getElementById("txt2").value
+            var c = parseInt(a) / parseInt(b)
+            var msg = "The division of " + a + " and " + b + " is " + c;
+            document.getElementById("hresult").innerHTML = msg
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+    <div class="form-control">
+    <label>Enter a : </label> 
+    <input type="text" id = "txt1"/>
+</div>
+<div class="form-control">
+    <label>Enter b : </label>
+    <input type="text" id = "txt2"/>
+</div>
+<div class="form-control">
+    <input type="button" value="Add" onclick="add()">
+<input type="button" value="Subtract" onclick="sub()">
+<input type="button" value="Multiply" onclick="mul()">
+<input type="button" value="Divide" onclick="div()">
+</div>
+<div class="form-control">
+    <h2 id="hresult"> </h2>
+</div>
+</div>
+</body>
+</html>

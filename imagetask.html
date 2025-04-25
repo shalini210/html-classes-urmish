@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImage(x){            
+            var img = document.getElementById("img1");
+            if(x==1)
+        {
+            img.src = "images/happy.jfif";            
+        }
+        else
+        {
+            if(x==0)
+        {
+            img.src = "images/sad.jfif";            
+        }
+        else
+        {
+            img.style.display = "none";
+        }
+        }
+        }
+        
+    </script>
+</head>
+<body>
+    <img src="images/sad.jfif" id="img1"
+     alt="" style="height:200px;width:200px"
+      onmouseover="changeImage(1)"
+      onmouseleave="changeImage(0)" onclick="changeImage(2)">
+    
+</body>
+</html>

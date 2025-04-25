@@ -1,0 +1,34 @@
+input[type="button"] {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.box
+{
+    width:50%;
+    margin:0 auto;
+    border: 1px solid #ccc;
+    box-shadow: #4CAF50 0px 0px 10px;
+}
+.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    box-sizing: border-box;
+}
+.form-control>input[type="text"]{
+        padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
