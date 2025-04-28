@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function chkchar()
+        {
+            var c = document.getElementById("txtchar").value;
+            c = c.toLowerCase();
+            // console.log(c)
+            msg = " you enter a consonenet"
+            var colorname = "greenyellow"
+            switch (c) {
+                    case "a":
+                    msg =" you enter vowel"                
+                           break;
+                    
+                    case "e":
+                    msg =" you enter vowel"
+                    break;
+                    
+                    case "i":
+                    msg =" you enter vowel"
+                    break;
+                    
+                    case "o":
+                    msg =" you enter vowel"
+                    break;
+                    
+                    case "u":
+                    msg =" you enter vowel"
+                    break;
+                       default:
+                        colorname = "orange"                 
+                        break;
+            }
+            document.getElementById("hresult").innerHTML=msg
+            document.getElementById("hresult").style.color=colorname
+            document.getElementById("txtchar").value=""
+            document.getElementById("txtchar").focus()
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter your grade:
+         <input type="text" id="txtchar" maxlength="1">
+    </p>
+    <input type="button" value="Check" onclick="chkchar()">
+    <h1 id="hresult"></h1>
+</body>
+</html>

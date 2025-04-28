@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Forjs.css">
+    <script>
+
+        //task : electricity bill :
+        // 0-50 : bill @5rs /unit green
+        //51-100: bill @7rs /unit orange
+        //100+ : bill @10rs /unit red
+        // units <0 : Invalid units 
+        
+        function findhighest()
+        {
+            var a = parseInt(document.getElementById("txta").value)
+            var b = parseInt(document.getElementById("txtb").value)
+            var c  = parseInt(document.getElementById("txtc").value);
+            var msg = ""
+            if(a>b && a>c)
+        {
+            msg = "a is highest"
+        }
+        else
+        {
+            if(b>c)
+        {
+            msg =" b is highest"
+        }
+        else
+        {
+            msg = "c is highest "
+        }
+        }
+            //&&-> when both the conditions are true
+            //   || -> when anyone of the conditionis is true
+            // if(a>b)
+            // {
+            //     if(a>c)
+            //     {
+            //         msg = "a is hgihest"
+            //     }
+            //     else
+            //     {
+            //         msg = "c is highest"
+            //     }
+            // }
+            // else
+            // {
+            //     if(b>c)
+            // {
+            //     msg = "b is highest "
+            // }
+            // else
+            // {
+            //      msg = " c is highest"
+            // }
+            // }
+            document.getElementById("hresult").innerHTML=msg
+        }
+    </script>
+</head>
+<body>
+    <p>Enter a : <input type="text" id="txta"></p>
+    <p>Enter b : <input type="text" id="txtb"></p>
+    <p>Enter c : <input type="text" id="txtc"></p>
+    <input type="button" value="Find" onclick="findhighest()">
+    <h2 id="hresult"></h2>
+</body>
+</html>
