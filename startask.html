@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @keyframes animate1 {
+            
+            100%{top:0%;left:50%;display: none;}
+            
+        }
+        @keyframes animate2 {
+            
+            
+            
+            100%{top:100%;left:100%;display: none;}
+        }
+        @keyframes animate3 {
+            
+            
+            
+            100%{top:50%;left:100%;display: none;}
+
+        }
+        @keyframes animate4 {
+            
+            
+            
+            100%{top:100%;left:50%;display: none;}
+            
+
+        }
+        @keyframes animate5 {
+            
+            
+            
+            100%{top:0%;left:100%;display: none;}
+            
+        }
+        @keyframes animate6 {
+            
+            
+            
+            100%{top:50%;left:0%;display: none;}
+            
+        }
+        @keyframes animate7 {
+            
+            
+            
+            100%{top:0%;left:0%;display: none;}
+            
+        }
+        @keyframes animate8 {
+            
+            100%{top:50%;left:100%;display: none;}
+            
+        }
+        @keyframes animate9 {
+            
+            
+            100%{top:100%;left:0%;display: none;}
+        }
+        @keyframes animate0 {
+            
+            
+            100%{top:0%;left:100%;display: none;}
+
+        }
+    </style>
+    <script>
+
+        function showStars()
+        {
+            var container = document.getElementById("container");
+            let createStats=()=>
+        {
+            for(var i=1;i<=200;i++)
+             {
+            const value1 ="20px"
+            var div = document.createElement("div")
+            div.style.height =value1 
+            div.style.width =value1
+            let cname ="red"
+            switch (i%10) {
+                case 1:
+                    cname="blue"
+                    break;
+            case 2:
+                cname="purple";
+                break;
+            case 3:
+                cname="yellow"
+                break;
+                
+                case 4:
+                cname="green"
+                break;
+                
+                case 5:
+                cname="orange"
+                
+                break;
+
+                
+                case 5:
+                cname="orange"
+                
+                break;
+                
+                case 6:
+                cname="skyblue"
+                
+                break;
+                
+                case 7:
+                cname="brown"
+                
+                break;
+                
+                case 8:
+                cname="orange"
+                
+                break;
+                default:
+                    cname="pink"
+                    break;
+            }
+                div.style.backgroundColor=cname
+            div.style.borderRadius="50%"
+            div.innerText=i%10;
+            div.style.fontSize="15px"
+            div.style.color="white"
+            div.style.textAlign="center"
+            // div.style.transform="rotate(45deg)"
+            div.style.position = "absolute"
+            div.style.animationDuration=(Math.random()*1000) +"s"
+            // div.style.animationDuration="30s"
+            // div.style.animationDelay=value1
+            div.style.top=(Math.floor(Math.random()*window.innerHeight))+"px"
+            div.style.left=(Math.floor(Math.random()*window.innerWidth))+"px"
+        //  alert(i%10)
+            
+            div.style.animationName="animate"+(i%10) 
+            div.style.animationIterationCount="infinite"
+            div.style.animationDirection="alternate"
+            
+            // div.style.animationFillMode="ease"
+            container.appendChild(div)
+            
+        }
+        }
+        createStats();
+        
+            
+            
+    
+            container.style.backgroundColor="black"
+            container.style.height="100dvh"
+            container.style.width="100%"
+        }
+        
+    </script>
+</head>
+<body onload="showStars()">
+    <div id="container">
+        
+
+    </div>
+
+    
+</body>
+
+</html>
