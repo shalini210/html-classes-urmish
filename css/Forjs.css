@@ -32,3 +32,35 @@ input[type="button"] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+.container
+{
+    display: flex;
+    gap:20px;
+}
+.ballon
+{
+    height:60px;
+    width:60px;
+    border:2px solid black;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    transform: rotate(315deg);
+    animation: animateballon 5s ;
+}
+@keyframes animateballon {
+    from{margin-top:90dvh}
+    to:{margin-top:1dvh}
+    
+}
+.red
+{
+    background-color: red;
+}
+.yellow
+{
+    background-color: yellow;    
+}
+.green
+{
+    background-color: green;    
+}

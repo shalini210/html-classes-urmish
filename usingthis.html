@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let count =0;
+        function burstBallon(e)
+        {            
+            e.style.display="none"
+            // count=count+1
+            count++
+            document.getElementById("pnumber").innerHTML=count
+        }
+    </script>
+    <link rel="stylesheet" href="css/Forjs.css">
+</head>
+<body>
+    <p id="pnumber">0</p>
+    <div class="container">
+        <div class="ballon red" onclick="burstBallon(this)"></div>
+        <div class="ballon green" onclick="burstBallon(this)"></div>
+        <div class="ballon yellow" onclick="burstBallon(this)"></div>
+        <div class="ballon green" onclick="burstBallon(this)"></div>
+        <div class="ballon red" onclick="burstBallon(this)"></div>
+    </div>
+    
+</body>
+</html>
