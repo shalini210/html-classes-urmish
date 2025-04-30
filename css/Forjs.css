@@ -46,9 +46,10 @@ input[type="button"] {
     border-bottom-left-radius: 0px;
     transform: rotate(315deg);
     animation: animateballon 5s ;
+    visibility:hidden;
 }
 @keyframes animateballon {
-    from{margin-top:90dvh}
+    from{margin-top:90dvh;visibility: visible;}
     to:{margin-top:1dvh}
     
 }

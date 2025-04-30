@@ -13,17 +13,43 @@
             count++
             document.getElementById("pnumber").innerHTML=count
         }
+        function getballons()
+        {
+            var balloncontainer= document.getElementById("balloncontainer")
+            // <div class="ballon green" onclick="burstBallon(this)"></div>        
+        for(var i=1;i<=8;i++)
+        {
+        var divballon = document.createElement("div")
+        var classname="ballon green"
+        //alert
+        var delay =(Math.round(Math.random()*10))+"s" 
+        if(i%3==0)
+        {
+            classname="ballon red"
+            
+        }
+        else if(i%3==1)
+        {
+            classname="ballon yellow"
+            
+        }
+        divballon.className=classname;
+        divballon.style.animationDelay=delay
+        balloncontainer.appendChild(divballon)
+        }
+            
+        }
     </script>
     <link rel="stylesheet" href="css/Forjs.css">
 </head>
-<body>
+<body onload="getballons()">
     <p id="pnumber">0</p>
-    <div class="container">
-        <div class="ballon red" onclick="burstBallon(this)"></div>
+    <div class="container" id="balloncontainer">
+        <!-- <div class="ballon red" onclick="burstBallon(this)"></div>
         <div class="ballon green" onclick="burstBallon(this)"></div>
         <div class="ballon yellow" onclick="burstBallon(this)"></div>
         <div class="ballon green" onclick="burstBallon(this)"></div>
-        <div class="ballon red" onclick="burstBallon(this)"></div>
+        <div class="ballon red" onclick="burstBallon(this)"></div> -->
     </div>
     
 </body>
