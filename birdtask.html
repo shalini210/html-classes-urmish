@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/Forjs.css">
+<script>
+    function createBirds()
+    {
+var birdContainer = document.getElementById("bird-container")
+        for(var i =1 ;i<=20;i++)
+    {
+        var speed = Math.round(Math.random()+10)
+        var delay = Math.round(Math.random()*10)
+        var div = document.createElement("div")
+        div.className="bird";
+        div.style.animationDuration=speed+"s"
+        div.style.animationDelay = delay +"s"
+        birdContainer.appendChild(div)
+        div.style.visibility="hidden"
+    }
+    }
+</script>
+</head>
+<body onload="createBirds()">
+    <div class="bird-container" id="bird-container">
+        
+    </div>
+    
+</body>
+</html>

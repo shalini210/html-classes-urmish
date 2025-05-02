@@ -10,6 +10,16 @@ input[type="button"] {
     margin: 4px 2px;
     cursor: pointer;
 }
+.bird-container
+{
+    height:100dvh;
+    width:100%;
+    /* background-color: skyblue; */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .box
 {
     width:50%;
@@ -64,4 +74,20 @@ input[type="button"] {
 .green
 {
     background-color: green;    
+}
+.bird
+{
+    height:40px;
+    width:40px;   
+    background-image: url(../images/bird.gif);
+    background-size: cover;
+    animation: birdanimation ;
+    animation-iteration-count: infinite;
+    visibility: visible;
+}
+@keyframes birdanimation {
+    0%{margin-left: 0px;visibility: visible;}
+
+    100%{margin-left: 100%;visibility: hidden;}
+    
 }
