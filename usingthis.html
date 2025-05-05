@@ -17,7 +17,7 @@
         {
             var balloncontainer= document.getElementById("balloncontainer")
             // <div class="ballon green" onclick="burstBallon(this)"></div>        
-        for(var i=1;i<=8;i++)
+        for(var i=1;i<=80;i++)
         {
         var divballon = document.createElement("div")
         var classname="ballon green"
@@ -35,6 +35,7 @@
         }
         divballon.className=classname;
         divballon.style.animationDelay=delay
+        divballon.addEventListener("click",function(){burstBallon(this)})
         balloncontainer.appendChild(divballon)
         }
             
@@ -43,9 +44,11 @@
     <link rel="stylesheet" href="css/Forjs.css">
 </head>
 <body onload="getballons()">
-    <p id="pnumber">0</p>
+ 
     <div class="container" id="balloncontainer">
-        <!-- <div class="ballon red" onclick="burstBallon(this)"></div>
+        <p id="pnumber">0</p>
+         <!-- <div class="ballon red" onclick="burstBallon(this)"></div> -->
+         <!-- 
         <div class="ballon green" onclick="burstBallon(this)"></div>
         <div class="ballon yellow" onclick="burstBallon(this)"></div>
         <div class="ballon green" onclick="burstBallon(this)"></div>

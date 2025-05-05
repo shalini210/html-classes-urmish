@@ -46,6 +46,10 @@ input[type="button"] {
 {
     display: flex;
     gap:20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100dvh;
+    background-color: orange;
 }
 .ballon
 {
@@ -57,9 +61,10 @@ input[type="button"] {
     transform: rotate(315deg);
     animation: animateballon 5s ;
     visibility:hidden;
+    /* position:relative; */
 }
 @keyframes animateballon {
-    from{margin-top:90dvh;visibility: visible;}
+    from{margin-top:75dvh;visibility: visible;}
     to:{margin-top:1dvh}
     
 }
