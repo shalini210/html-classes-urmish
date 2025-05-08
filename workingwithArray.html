@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cars = []       
+        function fun1()
+        {
+            var data = document.getElementById("data")
+            data.innerHTML=""
+            for(var i=(cars.length)-1 ; i>=0 ; i--)
+            {
+             data.innerHTML +=`car no ${i+1} is ${cars[i]} <br>`
+             }    
+        }
+        function addCar()
+        {
+            var txtcar = document.getElementById("txtcar")                     
+            cars.push(txtcar.value)            
+            fun1()
+            txtcar.value=""
+            txtcar.focus()
+        }
+        function deletecar()
+        {
+            cars.pop();
+            fun1()
+        }
+    </script>
+</head>
+<body>
+    
+    <p>Enter CArname <input type="text" id="txtcar">
+         <input type="button" value="ADd car" onclick="addCar()"></p>    
+         <input type="button" value="remove last" onclick="deletecar()">
+    <div id="data"></div>
+</body>
+</html>

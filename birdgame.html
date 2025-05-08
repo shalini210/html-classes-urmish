@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bird{
+            background-image: url(images/bird.gif);
+            height: 100px;
+            width:100px;
+            background-size: cover;
+            position: relative;
+            animation: flying 12s infinite linear;            
+        }
+        @keyframes flying {
+            from {left:0%;visibility:visible}
+            to{left:100%}
+            
+        }
+      
+        #birdcontainer
+        {
+            overflow-x: hidden;
+            height:100dvh;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+        }
+        .dbird
+        {
+            background-image: url(images/dbird.png);
+            height:100px;
+            width:100px;
+            background-size: cover;
+            background-position:right;
+            border:1px solid red;
+            position:relative;
+            
+        }
+    </style>
+    <script>
+        function createBirds()
+        {
+            var birdcontainer = document.getElementById("birdcontainer")
+          for(i=1;i<=10;i++)
+          {
+            var div = document.createElement("div")
+            
+            let delay = Math.round(Math.random()*10)
+            div.style.visibility="hidden"
+            div.style.animationDelay = delay+"s"
+            div.className  = "bird"           
+            div.style.left="0px"
+            div.id=("d"+i)
+            div.addEventListener('click',function(event)
+            {
+                div.removeAttribute("style")
+                // div.style.display="none"
+            const x = event.clientX;
+            const y = event.clientY;
+            // div.removeAttribute("className")
+            
+            div.className="dbird"
+            console.log(`Mouse position: x=${x}, y=${y}`);
+           
+        // let kf = document.createElement("style")
+        // kf.innerHTML = ` @keyframes falling{
+        //     from{top:${y}px;left:${x}px}
+        //     to{top:90dvh}
+        // } `
+        // document.head.append(kf)
+            div.style.animation = `falling 2s linear`
+            div.style.left=x+"px"
+            div.style.top = "90dvh";
+
+        })
+        birdcontainer.appendChild(div)
+
+          }
+        }
+    </script>
+</head>
+<body onload="createBirds()">
+    <div id="birdcontainer"></div>
+
+
+
+</body>
+</html>
