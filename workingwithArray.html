@@ -17,11 +17,39 @@
         }
         function addCar()
         {
-            var txtcar = document.getElementById("txtcar")                     
-            cars.push(txtcar.value)            
-            fun1()
-            txtcar.value=""
-            txtcar.focus()
+            var txtcar = document.getElementById("txtcar")        
+            let index = cars.findIndex((car)=>car==txtcar.value)
+            if(index>=0)
+            {
+                txtcar.style.borderColor="red"
+                  alert("already present ")                     
+             }
+            else
+            {
+                cars.push(txtcar.value)            
+                fun1()
+                txtcar.value=""
+                txtcar.focus()
+            }
+            //loop for comparision  
+            // let p = false
+            // for(var i=0;i<cars.length;i++)           
+            // {
+            //      if(cars[i]==txtcar.value)
+            //       {
+            //           p=true
+            //           txtcar.style.borderColor="red"
+            //           alert("already present ")
+            //          break;
+            //       }
+            // }
+            // if(!p)
+            // {
+            //     cars.push(txtcar.value)            
+            //     fun1()
+            //     txtcar.value=""
+            //     txtcar.focus()
+            // }
         }
         function deletecar()
         {

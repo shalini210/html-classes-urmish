@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showdata()
+        {
+            let txtname = document.getElementById("txtname")
+            let txtcontact = document.getElementById("txtcontact")
+            let student = {sname:txtname.value,scontact:txtcontact.value}
+            student.sname =  (student.sname).toUpperCase()
+            let msg = ` welcome ${student.sname} , contact : ${student.scontact}`
+            document.getElementById("hresult").innerHTML=msg
+        }
+    </script>
+</head>
+<body>
+    <p>Enter studnet name : <input type="text" id="txtname"></p>
+    <p>enter student contact no : <input type="text" id="txtcontact"></p>
+    <input type="button" value ="show" onclick="showdata()">
+    <h1 id="hresult"></h1>
+</body>
+</html>

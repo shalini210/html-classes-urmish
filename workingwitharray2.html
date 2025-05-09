@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cities=[]
+        var id=1;
+        function addcity()
+        {
+            var txtcity = document.getElementById("txtcity")
+            let cityname = txtcity.value;
+            let city ={id:id,cname:cityname}
+            id++;
+            cities.push(city)
+            txtcity.value=""
+            txtcity.focus
+            showcities()
+            //  {key:value,key:value}
+            // city.key
+        }
+        function showcities()
+        {
+            var dcities = document.getElementById("dcities")
+            let ui=""
+            for(var i =0 ;i<cities.length;i++)
+        {
+            ui+= ` <tr><td> ${cities[i].id } </td>
+                <td>  ${cities[i].cname }</td>
+                <td> <input type="button" value="Delete" onclick="deletecity(${cities[i].id})"</td>
+                <td> <input type="button" value="Update" onclick="updatecity(${cities[i].id})"</td>
+                </tr>`
+        }
+        document.getElementById("tbdy").innerHTML=ui
+        }
+        // deletecity(5)
+        function deletecity(pid)
+        {
+            let index = cities.findIndex((c)=>c.id==pid)
+            cities.splice(index,1)
+            showcities()
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter any city: <input type="text" id="txtcity">
+        <input type="button" value="Add" onclick="addcity()">
+
+    </p>
+    <table border="">
+        <thead><tr><th>id</th> <th>City Name</th> <th>Delete</th>
+        <th>Update</th></tr></thead>
+        <tbody id="tbdy">
+
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>
